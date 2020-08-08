@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import './timer.js'
+import Sandbox from './sandbox.js'
 
 function Square(props) {
     return (
@@ -150,8 +150,17 @@ function calculateWinner(squares) {
     return null;
 }
 
+function App() {
+    return (
+        <div>
+        <Game/>
+        <Sandbox rootId={"root"}/>
+        </div>
+    );
+}
+
 
 ReactDOM.render(
-    <Game/>,
+    <App/>,
     document.getElementById('root')
 );

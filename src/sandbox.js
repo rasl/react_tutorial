@@ -20,6 +20,7 @@ class Clock extends React.Component {
     }
 
     componentWillUnmount() {
+        console.log('componentWillUnmount');
         clearInterval(this.handleId);
     }
 
@@ -33,7 +34,23 @@ class Clock extends React.Component {
     }
 }
 
-ReactDOM.render(
-    <Clock/>,
-    document.getElementById('sandbox')
-);
+class ReactDeactivator extends React.Component {
+    unmount() {
+        ReactDOM.unmountComponentAtNode(document.getElementById(this.props.rootId));
+    }
+
+    render() {
+        return (
+            <button onClick={() => this.unmount()}>Вырубить react на тэге {this.props.rootId}</button>
+        );
+    }
+}
+
+export default function Sandbox(props) {
+    return (
+        <div>
+            <Clock/>
+            <ReactDeactivator rootId={props.rootId}/>
+        </div>
+    );
+}
