@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import ReactDOMServer from 'react-dom/server';
 import './index.css';
 
 function Square(props) {
@@ -150,10 +149,8 @@ function calculateWinner(squares) {
     return null;
 }
 
-// let html = ReactDOMServer.renderToString(Game);
-// console.log(html);
-// copy-paste html value to public/index.html:div#root
-ReactDOM.hydrate(
+
+ReactDOM.render(
     <Game/>,
     document.getElementById('root')
 );
