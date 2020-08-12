@@ -7,6 +7,7 @@ class Clock extends React.Component {
         this.state = {
             date: new Date()
         }
+        console.log('constructor');
     }
 
     tick() {
@@ -15,8 +16,29 @@ class Clock extends React.Component {
         });
     }
 
+    static getDerivedStateFromProps(props, state) {
+        console.log('getDerivedStateFromProps');
+        console.log(props, state);
+        return state;
+    }
+
     componentDidMount() {
+        console.log('componentDidMount');
         this.handleId = setInterval(() => this.tick(), 1000);
+    }
+
+    shouldComponentUpdate(nextProps, nextState, nextContext) {
+        return true;
+    }
+
+    componentDidUpdate(prevProps, prevState, snapshot) {
+        console.log('componentDidUpdate');
+        console.log(snapshot);
+    }
+
+    getSnapshotBeforeUpdate(prevProps, prevState) {
+        console.log('getSnapshotBeforeUpdate');
+        return {a: 'a'}
     }
 
     componentWillUnmount() {
