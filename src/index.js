@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Sandbox from './sandbox.js'
+import Sandbox from './sandbox.js';
+import Toggle from './components/toggle.js';
 
 function Square(props) {
     return (
@@ -155,6 +156,7 @@ function App() {
         <div>
         <Game/>
         <Sandbox rootId={"root"}/>
+        <Toggle />
         </div>
     );
 }
