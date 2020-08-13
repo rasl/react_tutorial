@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import Sandbox from './sandbox.js';
 import Toggle from './components/toggle.js';
+import LoginControl from "./components/logincontrol";
+import Page from "./components/page";
 
 function Square(props) {
     return (
@@ -154,9 +156,11 @@ function calculateWinner(squares) {
 function App() {
     return (
         <div>
-        <Game/>
-        <Sandbox rootId={"root"}/>
-        <Toggle />
+            <Page/>
+            <Game/>
+            <Sandbox rootId={"root"}/>
+            <Toggle/>
+            <LoginControl/>
         </div>
     );
 }
