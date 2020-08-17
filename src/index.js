@@ -7,6 +7,7 @@ import LoginControl from "./components/logincontrol";
 import Page from "./components/page";
 import NumberList from "./components/numberlist";
 import Nameform from "./components/nameform";
+import SimpleTextEditor from "./components/simpletexteditor";
 
 function Square(props) {
     return (
@@ -165,6 +166,7 @@ function App() {
             <LoginControl/>
             <NumberList numbers={[1,2,3,4]}/>
             <Nameform />
+            <SimpleTextEditor/>
         </div>
     );
 }
