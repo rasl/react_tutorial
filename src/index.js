@@ -6,6 +6,7 @@ import Toggle from './components/toggle.js';
 import LoginControl from "./components/logincontrol";
 import Page from "./components/page";
 import NumberList from "./components/numberlist";
+import Nameform from "./components/nameform";
 
 function Square(props) {
     return (
@@ -163,6 +164,7 @@ function App() {
             <Toggle/>
             <LoginControl/>
             <NumberList numbers={[1,2,3,4]}/>
+            <Nameform />
         </div>
     );
 }
