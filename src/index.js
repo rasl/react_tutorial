@@ -8,6 +8,7 @@ import Page from "./components/page";
 import NumberList from "./components/numberlist";
 import Nameform from "./components/nameform";
 import SimpleTextEditor from "./components/simpletexteditor";
+import TemperatureCalculator from "./components/boilingverdict";
 
 function Square(props) {
     return (
@@ -159,6 +160,7 @@ function calculateWinner(squares) {
 function App() {
     return (
         <div>
+            <TemperatureCalculator/>
             <Page/>
             <Game/>
             <Sandbox rootId={"root"}/>
