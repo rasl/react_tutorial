@@ -32,6 +32,7 @@ class TemperatureInput extends React.Component {
             <fieldset>
                 <legend>Input temperature in {scaleNames[scale]}</legend>
                 <input value={temperature} onChange={this.props.onTemperatureChange}/>
+                {this.props.children}
             </fieldset>
         );
     }
@@ -75,8 +76,11 @@ export default class Calculator extends React.Component {
 
         return (
             <div>
-                <BoilingVerdict celsius={parseFloat(celsius)}/>
-                <TemperatureInput scale="c" temperature={celsius} onTemperatureChange={this.handleCelsiusChange}/>
+                <BoilingVerdict celsius={parseFloat(celsius)}>
+                </BoilingVerdict>
+                <TemperatureInput scale="c" temperature={celsius} onTemperatureChange={this.handleCelsiusChange}>
+                    <div>some children element</div>
+                </TemperatureInput>
                 <TemperatureInput scale="f" temperature={fahrenheit} onTemperatureChange={this.handleFahrenheitChange}/>
             </div>
         );
