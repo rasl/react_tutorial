@@ -10,19 +10,21 @@ import Nameform from "./examples/nameform";
 import SimpleTextEditor from "./examples/simpletexteditor";
 import TemperatureCalculator from "./examples/boilingverdict";
 import {TicTacToe} from "./examples/tictactoe";
+import {ProtoShop} from "./examples/protoshop";
 
 function App() {
     return (
         <div>
-            <TemperatureCalculator/>
-            <Page/>
-            <TicTacToe/>
-            <Sandbox rootId={"root"}/>
-            <Toggle/>
-            <LoginControl/>
-            <NumberList numbers={[1,2,3,4]}/>
-            <Nameform />
-            <SimpleTextEditor/>
+            <ProtoShop/>
+            {/*<TemperatureCalculator/>*/}
+            {/*<Page/>*/}
+            {/*<TicTacToe/>*/}
+            {/*<Sandbox rootId={"root"}/>*/}
+            {/*<Toggle/>*/}
+            {/*<LoginControl/>*/}
+            {/*<NumberList numbers={[1,2,3,4]}/>*/}
+            {/*<Nameform />*/}
+            {/*<SimpleTextEditor/>*/}
         </div>
     );
 }
