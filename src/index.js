@@ -2,13 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import Sandbox from './sandbox.js';
-import Toggle from './components/toggle.js';
-import LoginControl from "./components/logincontrol";
-import Page from "./components/page";
-import NumberList from "./components/numberlist";
-import Nameform from "./components/nameform";
-import SimpleTextEditor from "./components/simpletexteditor";
-import TemperatureCalculator from "./components/boilingverdict";
+import Toggle from './examples/toggle.js';
+import LoginControl from "./examples/logincontrol";
+import Page from "./examples/page";
+import NumberList from "./examples/numberlist";
+import Nameform from "./examples/nameform";
+import SimpleTextEditor from "./examples/simpletexteditor";
+import TemperatureCalculator from "./examples/boilingverdict";
 
 function Square(props) {
     return (
