@@ -9,40 +9,10 @@ const products = [
     {category: "Electronics", price: "$199.99", stocked: true, name: "Nexus 7"}
 ];
 
-function FilterableProductTable(props) {
-    return (
-        <div className="FilterableProductTable">
-            <SearchBar/>
-            <ProductTable products={props.products}/>
-        </div>
-    );
-}
-
-function SearchBar(props) {
-    return (
-        <div className="FilterableProductTable">
-            <input placeholder="Search..."/> <br/>
-            <label><input type="checkbox"/>Only show products in stock</label>
-        </div>
-    );
-}
-
-function ProductTable(props) {
-    const products = props.products;
-    return (
-        <div className="ProductTable">
-            <div><span>Name</span> <span>Price</span></div>
-            <ProductCategoryRow/>
-            {products.map(product => {
-                return (<ProductRow product={product}/>);
-            })}
-        </div>
-    );
-}
-
 function ProductCategoryRow(props) {
     return (
         <div className="ProductCategoryRow">
+            {props.name}
         </div>
     );
 }
@@ -53,9 +23,82 @@ function ProductRow(props) {
     const isStocked = props.product.stocked;
     return (
         <div className="ProductRow">
-            <span style={{color:(isStocked?'black':'red')}}>{name}</span> {price}
+            <span style={{color: (isStocked ? 'black' : 'red')}}>{name}</span> {price}
         </div>
     );
+}
+
+function SearchBar(props) {
+    return (
+        <div className="FilterableProductTable">
+            <input type="text" placeholder="Search..." value={props.needle} onChange={props.handleChangeNeedle}/> <br/>
+            <label><input type="checkbox" checked={props.inStocked} onChange={props.handleChangeInStocked}/>Only show
+                products in stock</label>
+        </div>
+    );
+}
+
+function ProductTable(props) {
+    const products = props.products;
+    const inStocked = props.inStocked;
+    const needle = props.needle;
+    let categories = [];
+    let list = [];
+    products.forEach((product) => {
+        if (product.name.indexOf(needle) === -1) {
+            return;
+        }
+        if (inStocked && !product.stocked) {
+            return;
+        }
+        if (undefined === categories[product.category]) {
+            list.push((<ProductCategoryRow name={product.category} key={product.category}/>));
+            categories[product.category] = true;
+        }
+        list.push((<ProductRow product={product} key={product.name}/>));
+    });
+    console.log(list);
+    return (
+        <div className="ProductTable">
+            <div><span>Name</span> <span>Price</span></div>
+            {list}
+        </div>
+    );
+}
+
+class FilterableProductTable extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            needle: '',
+            inStocked: false,
+        }
+    }
+
+    handleChangeNeedle = (e) => {
+        this.setState({
+            needle: e.target.value
+        });
+    }
+
+    handleChangeInStocked = (e) => {
+        this.setState({
+            inStocked: e.target.checked
+        });
+    }
+
+    render() {
+        return (
+            <div className="FilterableProductTable">
+                <SearchBar needle={this.state.needle} inStocked={this.state.inStocked}
+                           handleChangeNeedle={this.handleChangeNeedle}
+                           handleChangeInStocked={this.handleChangeInStocked}
+                />
+                <ProductTable products={this.props.products} needle={this.state.needle}
+                              inStocked={this.state.inStocked}/>
+            </div>
+        );
+    }
 }
 
 export class ProtoShop extends React.Component {
