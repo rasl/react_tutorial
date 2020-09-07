@@ -15,7 +15,7 @@ import {ReactDeactivator} from "./examples/reactdeactivator";
 
 function App() {
     return (
-        <div>
+        <>
             <div>
                 <p>Tutorial: Intro to React</p>
                 <TicTacToe/>
@@ -59,7 +59,7 @@ function App() {
                 <ProtoShop/>
                 <hr />
             </div>
-        </div>
+        </>
     );
 }
 

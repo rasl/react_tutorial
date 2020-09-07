@@ -25,12 +25,12 @@ export default class Page extends React.Component {
 
     render() {
         return (
-            <div>
+            <>
                 <WarningBanner warn={this.state.showWarning}/>
                 <button onClick={this.handleClick}>
                     {this.state.showWarning ? "Hide" : "Show"}
                 </button>
-            </div>
+            </>
         );
     }
 }

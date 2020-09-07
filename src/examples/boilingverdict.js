@@ -75,14 +75,14 @@ export default class Calculator extends React.Component {
         const fahrenheit = scale === 'f' ? tryConvert(temperature, toFahrenheit) : temperature;
 
         return (
-            <div>
+            <>
                 <BoilingVerdict celsius={parseFloat(celsius)}>
                 </BoilingVerdict>
                 <TemperatureInput scale="c" temperature={celsius} onTemperatureChange={this.handleCelsiusChange}>
                     <div>some children element</div>
                 </TemperatureInput>
                 <TemperatureInput scale="f" temperature={fahrenheit} onTemperatureChange={this.handleFahrenheitChange}/>
-            </div>
+            </>
         );
     }
 }
