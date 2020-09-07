@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Sandbox from './sandbox.js';
 import Toggle from './examples/toggle.js';
 import LoginControl from "./examples/logincontrol";
 import Page from "./examples/page";
@@ -11,6 +10,8 @@ import SimpleTextEditor from "./examples/simpletexteditor";
 import TemperatureCalculator from "./examples/boilingverdict";
 import {TicTacToe} from "./examples/tictactoe";
 import {ProtoShop} from "./examples/protoshop";
+import {Clock} from "./examples/clock";
+import {ReactDeactivator} from "./examples/reactdeactivator";
 
 function App() {
     return (
@@ -22,7 +23,8 @@ function App() {
             </div>
             <div>
                 <p>5. State and Lifecycle</p>
-                <Sandbox rootId={"root"}/>
+                <Clock/>
+                <ReactDeactivator rootId={"root"}/>
                 <hr />
             </div>
             <div>
