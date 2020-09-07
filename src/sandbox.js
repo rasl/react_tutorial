@@ -26,8 +26,8 @@ class Clock extends React.Component {
     render() {
         return (
             <div>
-                <h1>Привет, мир!</h1>
-                <h2>Сейчас {this.state.date.toLocaleTimeString()}.</h2>
+                <h1>Hello, world!</h1>
+                <h2>Time: {this.state.date.toLocaleTimeString()}.</h2>
             </div>
         );
     }
@@ -40,7 +40,7 @@ class ReactDeactivator extends React.Component {
 
     render() {
         return (
-            <button onClick={() => this.unmount()}>Вырубить react на тэге {this.props.rootId}</button>
+            <button onClick={() => this.unmount()}>Disable React on tag: {this.props.rootId}</button>
         );
     }
 }

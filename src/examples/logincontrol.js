@@ -4,7 +4,7 @@ import Greeting from "./greeting";
 function LoginButton(props) {
     return (
         <button onClick={props.onClick}>
-            Войти
+            Login
         </button>
     );
 }
@@ -12,7 +12,7 @@ function LoginButton(props) {
 function LogoutButton(props) {
     return (
         <button onClick={props.onClick}>
-            Выйти
+            Logout
         </button>
     );
 }
