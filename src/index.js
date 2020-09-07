@@ -22,40 +22,40 @@ function App() {
                 <hr />
             </div>
             <div>
-                <p>5. State and Lifecycle</p>
+                <p>State and Lifecycle</p>
                 <Clock/>
                 <ReactDeactivator rootId={"root"}/>
                 <hr />
             </div>
             <div>
-                <p>6. Handling Events</p>
+                <p>Handling Events</p>
                 <Toggle/>
                 <Page/>
                 <hr />
             </div>
             <div>
-                <p>7. Conditional Rendering</p>
+                <p>Conditional Rendering</p>
                 <LoginControl/>
                 <hr />
             </div>
             <div>
-                <p>8. List and Keys</p>
+                <p>List and Keys</p>
                 <NumberList numbers={[1, 2, 3, 4]}/>
                 <hr />
             </div>
             <div>
-                <p>9. Forms (uncontrolled)</p>
+                <p>Forms (uncontrolled)</p>
                 <Nameform/>
                 <SimpleTextEditor/>
                 <hr />
             </div>
             <div>
-                <p>10. Lifting State up</p>
+                <p>Lifting State up</p>
                 <TemperatureCalculator/>
                 <hr />
             </div>
             <div>
-                <p>12. Thinking in React</p>
+                <p>Thinking in React</p>
                 <ProtoShop/>
                 <hr />
             </div>
