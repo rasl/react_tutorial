@@ -57,7 +57,6 @@ function ProductTable(props) {
         }
         list.push((<ProductRow product={product} key={product.name}/>));
     });
-    console.log(list);
     return (
         <div className="ProductTable">
             <div><span>Name</span> <span>Price</span></div>

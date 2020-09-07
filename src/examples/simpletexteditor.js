@@ -13,7 +13,6 @@ export default class SimpleTextEditor extends React.Component {
         const file = this.fileInput.current.files[0];
         const reader = new FileReader();
         reader.onload = (event) => {
-            console.log(this);
             this.setState({
                 text: event.currentTarget.result.toString()
             });
@@ -25,10 +24,6 @@ export default class SimpleTextEditor extends React.Component {
         this.setState({
             text: e.target.value
         })
-    }
-
-    componentDidUpdate(prevProps, prevState, snapshot) {
-        console.log(prevState);
     }
 
     render() {
