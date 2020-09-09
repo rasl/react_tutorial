@@ -66,6 +66,14 @@ function App() {
                     <hr/>
                 </div>
             </details>
+            <h1>Advanced guides</h1>
+            <details open={"open"}>
+                <div>
+                    <p>Context</p>
+                    <ContextExamples/>
+                    <hr />
+                </div>
+            </details>
         </>
     );
 }
