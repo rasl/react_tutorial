@@ -79,7 +79,7 @@ function calculateWinner(squares) {
     return null;
 }
 
-export class TicTacToe extends React.Component {
+export default class TicTacToe extends React.Component {
     constructor(props) {
         super(props);
         this.state = {

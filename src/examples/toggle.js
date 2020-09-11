@@ -4,7 +4,7 @@ export default class Toggle extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            isToggleOn: undefined !== props.isDefault ? props.isDefault : false,
+            isToggleOn: false,
         };
     }
 

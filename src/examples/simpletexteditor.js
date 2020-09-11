@@ -9,7 +9,7 @@ export default class SimpleTextEditor extends React.Component {
         }
     }
 
-    handleChangeFileInput = (e) => {
+    handleChangeFileInput = () => {
         const file = this.fileInput.current.files[0];
         const reader = new FileReader();
         reader.onload = (event) => {

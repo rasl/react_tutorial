@@ -1,6 +1,7 @@
 import React from "react";
 import {themes} from "./theme-context";
 
+// noinspection SpellCheckingInspection
 export const users = {
     guest: {name: 'guest', preferredTheme: themes.light},
     user: {name: 'Foma Kinev', preferredTheme: themes.dark}

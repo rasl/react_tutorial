@@ -1,6 +1,6 @@
 import React from "react";
 
-export default class Nameform extends React.Component {
+export default class NameForm extends React.Component {
     constructor(props) {
         super(props);
         this.input = React.createRef();
@@ -13,7 +13,7 @@ export default class Nameform extends React.Component {
 
     render() {
         return (
-            <div><p>Uncontrol form</p>
+            <div><p>Uncontrolled form</p>
                 <form onSubmit={this.handleSubmit}>
                     <label>Name:
                         <input type="text" ref={this.input} defaultValue='placeholder'/>

@@ -5,13 +5,13 @@ import Toggle from './examples/toggle.js';
 import LoginControl from "./examples/logincontrol";
 import Page from "./examples/page";
 import NumberList from "./examples/numberlist";
-import Nameform from "./examples/nameform";
+import NameForm from "./examples/nameForm";
 import SimpleTextEditor from "./examples/simpletexteditor";
 import TemperatureCalculator from "./examples/boilingverdict";
-import {TicTacToe} from "./examples/tictactoe";
-import {ProtoShop} from "./examples/protoshop";
-import {Clock} from "./examples/clock";
-import {ReactDeactivator} from "./examples/reactdeactivator";
+import TicTacToe from "./examples/tictactoe";
+import ProtoShop from "./examples/protoshop";
+import Clock from "./examples/clock";
+import ReactDeactivator from "./examples/reactdeactivator";
 import ContextExamples from "./examples/context/contextexamples";
 
 function App() {
@@ -51,7 +51,7 @@ function App() {
                 </div>
                 <div>
                     <p>Forms (uncontrolled)</p>
-                    <Nameform/>
+                    <NameForm/>
                     <SimpleTextEditor/>
                     <hr/>
                 </div>
@@ -71,7 +71,7 @@ function App() {
                 <div>
                     <p>Context</p>
                     <ContextExamples/>
-                    <hr />
+                    <hr/>
                 </div>
             </details>
         </>

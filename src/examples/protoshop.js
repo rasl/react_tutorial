@@ -100,7 +100,7 @@ class FilterableProductTable extends React.Component {
     }
 }
 
-export class ProtoShop extends React.Component {
+export default class ProtoShop extends React.Component {
     render() {
         return (
             <FilterableProductTable products={products}/>

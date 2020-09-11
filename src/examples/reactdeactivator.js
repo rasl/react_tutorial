@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-export class ReactDeactivator extends React.Component {
+export default class ReactDeactivator extends React.Component {
     unmount() {
         ReactDOM.unmountComponentAtNode(document.getElementById(this.props.rootId));
     }
