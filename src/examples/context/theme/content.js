@@ -1,4 +1,4 @@
-import {ThemeContext} from "./contex";
+import {ThemeContext} from "./theme-context";
 import React from "react";
 import ThemeToggler from "./theme-toggler";
 

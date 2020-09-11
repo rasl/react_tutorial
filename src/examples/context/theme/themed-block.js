@@ -1,5 +1,5 @@
 import React from "react";
-import {ThemeContext, themes} from "./contex";
+import {ThemeContext, themes} from "./theme-context";
 import {Content} from "./content";
 import ThemeToggler from "./theme-toggler";
 
