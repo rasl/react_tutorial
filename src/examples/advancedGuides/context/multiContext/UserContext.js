@@ -1,5 +1,5 @@
 import React from "react";
-import {themes} from "./theme-context";
+import {themes} from "./ThemeContext";
 
 // noinspection SpellCheckingInspection
 export const users = {

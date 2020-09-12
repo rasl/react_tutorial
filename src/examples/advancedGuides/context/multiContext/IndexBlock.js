@@ -1,10 +1,10 @@
 import React from "react";
-import {ThemeContext, themes} from "./theme-context";
-import {Content} from "./content";
-import ThemeToggler from "./theme-toggler";
-import {UserContext, users} from "./user-context";
+import {ThemeContext, themes} from "./ThemeContext";
+import {Content} from "./Content";
+import ThemeToggler from "./ThemeToggler";
+import {UserContext, users} from "./UserContext";
 
-export default class ThemedBlock extends React.Component {
+export default class IndexBlock extends React.Component {
     constructor(props) {
         super(props);
         const defaultUser = users.guest;

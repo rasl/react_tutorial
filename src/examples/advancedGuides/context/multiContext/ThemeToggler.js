@@ -1,6 +1,6 @@
-import {ThemeContext} from "./theme-context";
+import {ThemeContext} from "./ThemeContext";
 import React from "react";
-import ThemedButton from "./themed-button";
+import ThemedButton from "./ThemedButton";
 
 export default function ThemeToggler(props) {
     return (

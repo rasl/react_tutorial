@@ -1,9 +1,9 @@
-import {ThemeContext} from "./theme-context";
+import {ThemeContext} from "./ThemeContext";
 import React from "react";
-import ThemeToggler from "./theme-toggler";
-import Greeting from "./greeting";
-import {UserContext} from "./user-context";
-import ThemedButton from "./themed-button";
+import ThemeToggler from "./ThemeToggler";
+import Greeting from "./Greeting";
+import {UserContext} from "./UserContext";
+import ThemedButton from "./ThemedButton";
 
 export function Content() {
     return (

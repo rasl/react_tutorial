@@ -13,6 +13,7 @@ export default class SimpleTextEditor extends React.Component {
         const file = this.fileInput.current.files[0];
         const reader = new FileReader();
         reader.onload = (event) => {
+            // noinspection JSUnresolvedVariable
             this.setState({
                 text: event.currentTarget.result.toString()
             });
@@ -31,7 +32,7 @@ export default class SimpleTextEditor extends React.Component {
             <div><p>Simple text editor</p>
                 <form>
                     <input type="file" ref={this.fileInput} onChange={this.handleChangeFileInput}/>
-                    <textarea value={this.state.text} cols="100" onChange={this.handleText}></textarea>
+                    <textarea value={this.state.text} cols="100" onChange={this.handleText} />
                 </form>
             </div>
         );
