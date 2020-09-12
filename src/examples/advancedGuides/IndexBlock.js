@@ -3,13 +3,20 @@ import {default as ContextExamples} from "./context/IndexBlock";
 
 export default function IndexBlock() {
     return <>
-        <h1>Advanced guides</h1>
-        <details open={"open"}>
-            <div>
-                <p>Context</p>
-                <ContextExamples/>
-                <hr/>
+        <details open={"open"} >
+            <summary>Advanced guides</summary>
+            <div className="innerBlock">
+                <details>
+                    <summary>Context</summary>
+                    <ContextExamples/>
+                    <hr/>
+                </details>
+                <details open={"open"}>
+                    <summary>References</summary>
+                    <div>Example</div>
+                    <hr/>
+                </details>
             </div>
         </details>
-        </>;
+    </>;
 }

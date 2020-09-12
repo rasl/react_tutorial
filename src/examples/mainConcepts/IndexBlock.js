@@ -12,46 +12,48 @@ import ProtoShop from "./examples/ProtoShop";
 
 export default function IndexBlock() {
     return <>
-        <h1>Main concepts</h1>
         <details>
-            <div>
-                <p>State and Lifecycle</p>
-                <Clock/>
-                <ReactDeactivator rootId={"root"}/>
-                <hr/>
-            </div>
-            <div>
-                <p>Handling Events</p>
-                <Toggler/>
-                <Page/>
-                <hr/>
-            </div>
-            <div>
-                <p>Conditional Rendering</p>
-                <LoginControl/>
-                <hr/>
-            </div>
-            <div>
-                <p>List and Keys</p>
-                <NumberList numbers={[1, 2, 3, 4]}/>
-                <hr/>
-            </div>
-            <div>
-                <p>Forms (uncontrolled)</p>
-                <NameForm/>
-                <SimpleTextEditor/>
-                <hr/>
-            </div>
-            <div>
-                <p>Lifting State up</p>
-                <TemperatureCalculator/>
-                <hr/>
-            </div>
-            <div>
-                <p>Thinking in React</p>
-                <ProtoShop/>
-                <hr/>
+            <summary>Main concepts</summary>
+            <div className="innerBlock">
+                <details>
+                    <summary>State and Lifecycle</summary>
+                    <Clock/>
+                    <ReactDeactivator rootId={"root"}/>
+                    <hr/>
+                </details>
+                <details>
+                    <summary>Handling Events</summary>
+                    <Toggler/>
+                    <Page/>
+                    <hr/>
+                </details>
+                <details>
+                    <summary>Conditional Rendering</summary>
+                    <LoginControl/>
+                    <hr/>
+                </details>
+                <details>
+                    <summary>List and Keys</summary>
+                    <NumberList numbers={[1, 2, 3, 4]}/>
+                    <hr/>
+                </details>
+                <details>
+                    <summary>Forms (uncontrolled)</summary>
+                    <NameForm/>
+                    <SimpleTextEditor/>
+                    <hr/>
+                </details>
+                <details>
+                    <summary>Lifting State up</summary>
+                    <TemperatureCalculator/>
+                    <hr/>
+                </details>
+                <details>
+                    <summary>Thinking in React</summary>
+                    <ProtoShop/>
+                    <hr/>
+                </details>
             </div>
         </details>
-        </>;
+    </>;
 }

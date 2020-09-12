@@ -4,9 +4,9 @@ import TicTacToe from "./TicTacToe";
 export default function IndexBlock() {
     return (
         <>
-            <h1>Tutorial</h1>
             <details>
-                <div>
+                <summary>Tutorial</summary>
+                <div className="innerBlock">
                     <p>Intro to React</p>
                     <TicTacToe/>
                     <hr/>
