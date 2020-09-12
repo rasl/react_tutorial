@@ -1,9 +1,10 @@
 import React from "react";
 import {default as ContextExamples} from "./context/IndexBlock";
+import AutoFocusCustomInput from "./refs/AutoFocusCustomInput";
 
 export default function IndexBlock() {
     return <>
-        <details open={"open"} >
+        <details open={"open"}>
             <summary>Advanced guides</summary>
             <div className="innerBlock">
                 <details>
@@ -13,7 +14,7 @@ export default function IndexBlock() {
                 </details>
                 <details open={"open"}>
                     <summary>References</summary>
-                    <div>Example</div>
+                    <AutoFocusCustomInput/>
                     <hr/>
                 </details>
             </div>
