@@ -1,6 +1,7 @@
 import React from "react";
 import {default as ContextExamples} from "./context/IndexBlock";
 import AutoFocusCustomInput from "./refs/AutoFocusCustomInput";
+import FancyBoxes from "./refs/FancyBoxes";
 
 export default function IndexBlock() {
     return <>
@@ -12,9 +13,14 @@ export default function IndexBlock() {
                     <ContextExamples/>
                     <hr/>
                 </details>
-                <details open={"open"}>
+                <details>
                     <summary>References</summary>
                     <AutoFocusCustomInput/>
+                    <hr/>
+                </details>
+                <details open={"open"}>
+                    <summary>Forward refs (Fancy box)</summary>
+                    <FancyBoxes isOpen={false}/>
                     <hr/>
                 </details>
             </div>
