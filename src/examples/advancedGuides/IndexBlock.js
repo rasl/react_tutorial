@@ -2,6 +2,7 @@ import React from "react";
 import {default as ContextExamples} from "./context/IndexBlock";
 import AutoFocusCustomInput from "./refs/AutoFocusCustomInput";
 import FancyBoxes from "./refs/FancyBoxes";
+import HocExample from "./hoc/HocExample";
 
 export default function IndexBlock() {
     return <>
@@ -18,9 +19,14 @@ export default function IndexBlock() {
                     <AutoFocusCustomInput/>
                     <hr/>
                 </details>
-                <details open={"open"}>
+                <details>
                     <summary>Forward refs (Fancy box)</summary>
                     <FancyBoxes isOpen={false}/>
+                    <hr/>
+                </details>
+                <details open={"open"}>
+                    <summary>High-order components</summary>
+                    <HocExample/>
                     <hr/>
                 </details>
             </div>
