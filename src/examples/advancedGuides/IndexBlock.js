@@ -3,6 +3,7 @@ import {default as ContextExamples} from "./context/IndexBlock";
 import AutoFocusCustomInput from "./refs/AutoFocusCustomInput";
 import FancyBoxes from "./refs/FancyBoxes";
 import HocExample from "./hoc/HocExample";
+import UpdateExample from "./shouldUpdate/UpdateExample";
 
 export default function IndexBlock() {
     return <>
@@ -24,9 +25,14 @@ export default function IndexBlock() {
                     <FancyBoxes isOpen={false}/>
                     <hr/>
                 </details>
-                <details open={"open"}>
+                <details>
                     <summary>High-order components</summary>
                     <HocExample/>
+                    <hr/>
+                </details>
+                <details open={"open"}>
+                    <summary>Optimizing: skip render</summary>
+                    <UpdateExample />
                     <hr/>
                 </details>
             </div>
