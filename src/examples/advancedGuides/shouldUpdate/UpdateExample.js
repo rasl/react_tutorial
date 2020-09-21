@@ -17,9 +17,7 @@ class WordAdder extends React.Component {
     }
 
     handleClick() {
-        const words = this.state.words.slice(0);
-        words.push(this.inputRef.current.value);
-        this.setState({words: words});
+        this.setState(state => ({words: [...state.words, this.inputRef.current.value]}));
     }
 
     render() {
