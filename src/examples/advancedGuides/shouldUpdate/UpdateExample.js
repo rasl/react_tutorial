@@ -17,8 +17,8 @@ class WordAdder extends React.Component {
     }
 
     handleClick() {
-        const words = this.state.words; // bug: it's the same object
-        words.push(this.inputRef.current.value);// bug: object mutation, should be create new object, ListOfWords (PureComponent) won't be updated
+        const words = this.state.words.slice(0);
+        words.push(this.inputRef.current.value);
         this.setState({words: words});
     }
 
